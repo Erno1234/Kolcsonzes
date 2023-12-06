@@ -2,5 +2,5 @@
 package konyvtarprogram;
 
 public interface Kolcsonozheto {
-    public boolean kolcsonzes();
+    public void kolcsonzes();
 }

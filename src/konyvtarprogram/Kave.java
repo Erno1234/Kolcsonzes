@@ -7,14 +7,12 @@ public class Kave extends AbstractTermek{
     private UUID id;
     private String tipus;
 
-    public Kave(String tipus) {
-        this.id = UUID.randomUUID();
-        this.tipus = tipus;
+    public Kave(UUID id, String tipus) {
+        super(id);
+         this.tipus = tipus;
     }
 
-    public UUID getId() {
-        return id;
-    }
+
 
     public String getTipus() {
         return tipus;

@@ -4,33 +4,29 @@ package konyvtarprogram;
 import java.util.UUID;
 
 public class Konyv extends AbstractTermek implements Kolcsonozheto {
-    private UUID id;
-    private String cim;
-    private boolean kolcsonozheto;
     
-    public Konyv(String cim) {
-        this.id = UUID.randomUUID();
-        this.cim = cim;
-        this.kolcsonozheto= false;
-        
-    }
+    private String cim;
 
-    public UUID getId() {
-        return id;
+    public Konyv(UUID id,String cim) {
+        super(id);
+        this.cim = cim;
     }
+   
 
     public String getCim() {
         return cim;
     }
-    
-    @Override
-    public String toString() {
-        return "Konyv{" + "id=" + id + ", cim=" + cim + '}';
-    }
 
     @Override
-    public boolean kolcsonzes() {
-        return this.kolcsonozheto = true;
+    public String toString() {
+        return "Konyv{" + "cim=" + cim + '}';
+    }
+    
+  
+
+    @Override
+    public void kolcsonzes() {
+       
     }
     
     
