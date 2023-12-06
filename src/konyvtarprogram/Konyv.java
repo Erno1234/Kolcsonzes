@@ -6,10 +6,12 @@ import java.util.UUID;
 public class Konyv extends AbstractTermek implements Kolcsonozheto {
     private UUID id;
     private String cim;
+    private boolean kolcsonozheto;
     
     public Konyv(String cim) {
         this.id = UUID.randomUUID();
         this.cim = cim;
+        this.kolcsonozheto= false;
         
     }
 
@@ -27,8 +29,8 @@ public class Konyv extends AbstractTermek implements Kolcsonozheto {
     }
 
     @Override
-    public void kolcsonzes() {
-        System.out.println("Kölcsönözhető");
+    public boolean kolcsonzes() {
+        return this.kolcsonozheto = true;
     }
     
     
